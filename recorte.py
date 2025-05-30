@@ -3,11 +3,11 @@ import cv2
 from ultralytics import YOLO
 
 # Nome do arquivo de entrada
-imagem_entrada = "/root/PEP/testes/imagem002.jpeg"
+imagem_entrada = "/root/PEP/testes/Buffy_104.jpg"
 nome_base = os.path.splitext(os.path.basename(imagem_entrada))[0]
 
 # Carrega o modelo YOLO
-model = YOLO("runs/detect/train2/weights/best.pt")
+model = YOLO("runs/detect/train3/weights/best.pt")
 results = model.predict(source=imagem_entrada)[0]
 image = cv2.imread(imagem_entrada)
 
